@@ -1,0 +1,5 @@
+node_modules
+docs/.obsidian
+docs/.vuepress/*
+docs/.vuepress/public
+!docs/.vuepress/*.js
