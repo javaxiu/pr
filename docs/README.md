@@ -4,7 +4,7 @@ heroImage: /1.jpg
 heroText: jiawen的博客
 tagline: 技术/所思
 actionText:  →
-actionLink: http://localhost:8080/pr/electron/container.html
+actionLink: /pr/electron/container.html
 features:
 - title: Electron系列
   details: Electron系列的容器、产品技术分析、坑点总结
