@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "start": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "sync": "ts-node-esm -T ./docs/.vuepress/sync/yuque-sync.ts",
+    "deploy": "node ./docs/.vuepress/sync/publish"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "gh-pages": "^6.0.0",
     "vuepress": "^1.9.10"
   },
   "dependencies": {

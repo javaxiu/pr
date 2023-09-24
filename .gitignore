@@ -1,5 +1,7 @@
 node_modules
 docs/.obsidian
-docs/.vuepress/*
+docs/.vuepress/*.json
+docs/.vuepress/sync/*.json
 docs/.vuepress/public
 !docs/.vuepress/*.js
+docs/pr
