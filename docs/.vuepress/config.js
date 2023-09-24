@@ -1,8 +1,10 @@
 const sidebar = require('./sidebar.json');
+const { base } = require('./sync/config.json');
 
 module.exports = {
   title: 'xiujava',
   description: 'jiawen 的博客',
+  base,
   // theme: 'reco',
   themeConfig: {
     search: false,
