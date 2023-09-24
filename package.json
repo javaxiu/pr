@@ -7,7 +7,7 @@
     "start": "vuepress dev docs",
     "build": "vuepress build docs",
     "sync": "ts-node-esm -T ./docs/.vuepress/sync/yuque-sync.ts",
-    "deploy": "./deploy.sh"
+    "deploy": "gh-pages -d ./docs/.vuepress/dist -b gh-pages"
   },
   "keywords": [],
   "author": "",
