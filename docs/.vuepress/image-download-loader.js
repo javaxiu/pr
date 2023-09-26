@@ -1,6 +1,7 @@
 const request = require('request');
 const fs = require('fs-extra');
 const path = require('path');
+const { ua, cookie, base } = require('./sync/config.json');
 
 const root = path.join(process.cwd(), './docs/.vuepress/public');
 
@@ -18,7 +19,8 @@ const download = (url) => {
     request({
       url,
       headers: {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36'
+        'User-Agent': ua,
+        Cookie: cookie,
       }
     }).pipe(fs.createWriteStream(absPath))
   });
@@ -29,7 +31,7 @@ module.exports = function (markdown){
   const regex = /!\[.*?\]\((.*?)\)/g;
   return markdown.replace(regex, (tag, url) => {
     const pathname = download(url)
-    return tag.replace(url, pathname);
+    return tag.replace(url, base + pathname);
   });
 }
 
